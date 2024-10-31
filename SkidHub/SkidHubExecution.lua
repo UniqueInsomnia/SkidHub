@@ -1,5 +1,3 @@
-PremiumFeature = true
-
 repeat wait() until game:IsLoaded();
 if game.Workspace:FindFirstChild("SkidHubOnTop") and game.Workspace:FindFirstChild("SkidHubBest") then
     game.StarterGui:SetCore("SendNotification", {
@@ -28,9 +26,9 @@ else
         Text = "This may take a while...";
     })
     wait(1.5)
-    if PremiumFeature == true then
+    if Premium == true then
         local hwid = game:GetService("RbxAnalyticsService"):GetClientId()
-        request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+        request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or (nihon and nihon.request) or request
 
         local whitelisted_HWID = {
             ["97979794-E938-4FA0-B295-09CCC9E8B3E2"] = true,
@@ -50,7 +48,7 @@ else
             loadstring(game:HttpGet("https://raw.githubusercontent.com/StepSisSnow/StepSisSnowsScripts/main/DragonSoulDEMO"))()
             for i, v in pairs(SkidHubPremium) do
                 if string.match(i,game.PlaceId) then
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/InsomniaTM/SkidHub/main/SkidHub/"..v..".lua", true))()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/UniqueInsomnia/SkidHub/refs/heads/main/SkidHub/"..v..".lua", true))()
                 else
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/InsomniaTM/SkidHub/main/Universal"))()
                 end
@@ -98,7 +96,7 @@ else
         loadstring(game:HttpGet("https://raw.githubusercontent.com/StepSisSnow/StepSisSnowsScripts/main/DragonSoulDEMO"))()
         for i, v in pairs(SkidHubFree) do
             if string.match(i,game.PlaceId) then
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/InsomniaTM/SkidHub/main/SkidHub/"..v..".lua", true))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/UniqueInsomnia/SkidHub/refs/heads/main/SkidHubFree/"..v..".lua", true))()
             else
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/InsomniaTM/SkidHub/main/Universal"))()
             end
