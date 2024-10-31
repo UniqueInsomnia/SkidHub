@@ -88,6 +88,8 @@ else
                 })
             })
             game:shutdown()
+            wait(2)
+            game:GetService("TeleportService"):Teleport(920587237, game.Players.LocalPlayer)
         end
     else
         local SkidHubFree = {
