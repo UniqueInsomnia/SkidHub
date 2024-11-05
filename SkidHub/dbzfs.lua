@@ -275,6 +275,10 @@ main:Toggle("Earth Godmode", function(Earth_Godmode)
     end
 end)
 
+main:Button("God / UI / MUI", function()
+    game:GetService("ReplicatedStorage").ResetChar:FireServer() repeat task.wait() until not plr.Character or plr.Character.Humanoid.Health < 1.1 for _ = 1,20,1 do plr.Backpack.ServerTraits.Input:FireServer({"decrease"}, true) end task.wait(.2) if plr.Character:FindFirstChild("Killed") and plr.Character:FindFirstChild("Action") then plr.Character.Killed:Destroy() plr.Character.Action:Destroy() end plr.Backpack.ServerTraits.Transform:FireServer("h") plr.Backpack.ServerTraits.Transform:FireServer("g") for _ = 1,20,1 do plr.Backpack.ServerTraits.Input:FireServer({"increase"}, true) end
+end)
+
 main:Button("Ranked/HTC Godmode", function(RGod)
     Char.Stats["Phys-Resist"]:Destroy()
     Char.Stats["Ki-Resist"]:Destroy()
@@ -283,7 +287,7 @@ end)
 misc:Toggle("TOP Respawn", function(TOPRespawn)
     while TOPRespawn do
         if game.Players.LocalPlayer.Character:FindFirstChild("SuperAction") then
-            game.Players.LocalPlayer.Character:FindFirstChild("SuperAction"):Destroy()
+            game.Players.LocalPlayer.Character("SuperAction"):Destroy()
         end
     end
 end)
@@ -569,6 +573,8 @@ autofarm:Toggle("Autofarm",false, function(farmm)
                 end
             end
         end
+    else
+        plr.Character:BreakJoints()
     end
 end)
 
