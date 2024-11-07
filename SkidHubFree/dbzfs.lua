@@ -573,8 +573,6 @@ autofarm:Toggle("Autofarm",false, function(farmm)
                 end
             end
         end
-    else
-        plr.Character:BreakJoints()
     end
 end)
 
